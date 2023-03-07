@@ -1,5 +1,5 @@
 <?php
-
+    // ao invés de utilizar o inteiro  etc...
     $a = fgets(STDIN);
     $b = fgets(STDIN);
 
