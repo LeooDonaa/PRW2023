@@ -1,27 +1,28 @@
 <?php
-    // loop para ler valores M e N enquanto ambos forem maiores que zero
+    // Loop infinito para ler valores de entrada e calcular a soma.
     while (true) {
-        // lê os valores de M e N como uma única linha de entrada e os separa em um array de inteiros
-        $input = explode(" ", fgets(STDIN));
-        $m = intval($input[0]);
-        $n = intval($input[1]);
-
-        // verifica se algum dos valores é menor ou igual a zero, e para o loop caso seja
+        // Lê dois inteiros da entrada padrão.
+        fscanf(STDIN, "%d %d", $m, $n);
+        // Verifica se um dos valores lidos é menor ou igual a 0.
         if ($m <= 0 || $n <= 0) {
+            // Se sim, encerra o loop.
             break;
         }
-
-        // inicia a sequência e a soma com o valor mínimo entre M e N
-        $seq = "";
-        $sum = min($m, $n);
-
-        // adiciona cada número da sequência à string e soma ao total
-        for ($i = $sum + 1; $i <= max($m, $n); $i++) {
-            $seq .= "$i ";
+        // Variável para armazenar a soma.
+        $sum = 0;
+        // Verifica se m é maior que n.
+        if ($m > $n) {
+            // Se sim, troca os valores de m e n.
+            list($m, $n) = array($n, $m);
+        }
+        // Loop para iterar por valores de m a n.
+        for ($i = $m; $i <= $n; $i++) {
+            // Imprime o valor de i seguido de um espaço em branco.
+            echo $i . " ";
+            // Adiciona i à soma.
             $sum += $i;
         }
-
-        // imprime a sequência e a soma formatadas
-        echo trim($seq) . " Sum=$sum\n";
+        // Imprime a mensagem "Sum=" seguida do valor da soma na tela.
+        echo "Sum=" . $sum . "\n";
     }
 ?>
