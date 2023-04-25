@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio2</title>
+</head>
+<body>
+    <form action="form2.php" method="POST">
+        <div>
+            <label for="texto">Texto</label>
+            <input type="text" name="texto">
+        </div>
+        <br>
+        <div>
+            <label for="textoarea">Texto area</label>
+            <br>
+            <textarea id="textoarea" name="textoarea" rows="4" cols="50"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="checkbox">Seleção</label>
+
+            <div>
+                <input type="checkbox" name="checkbox" values="1">
+                <label for="op1">Op1</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox" values="2">
+                <label for="op2">Op2</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="checkbox" values="3">
+                <label for="op3">Op3</label>
+            </div>
+            <br>
+            <div>
+                <label for="opcoes">Opções</label>
+                <input type="radio" name="radio" value="op1"> Op1
+                <input type="radio" name="radio" value="op2"> Op2
+                <input type="radio" name="radio" value="op3"> Op3
+                <input type="radio" name="radio" value="op4"> Op4
+            </div>
+            <br>
+
+            <div>
+                <label for="opcao">Escolha uma opção:</label>
+                <select id="op" name="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
